@@ -1,0 +1,42 @@
+:root{
+    --color-bg: rgb(243, 242, 242);
+    --color-texto: #ee6352;
+}
+body.darkTheme{
+    --color-bg: rgb(37, 37, 37);
+    --color-texto: #eed12c;
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        --color-bg: rgb(37, 37, 37);
+        --color-texto: #eed12c;
+    }
+    body.lightTheme{
+        --color-bg: rgb(243, 242, 242);
+        --color-texto: #ee6352;
+    }
+}
+
+body{
+    transition: all .5s ease;
+    background-color: var(--color-bg);
+}
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+button{
+    transition: all 0.5s ease;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--color-bg);
+    background-color: var(--color-texto);
+    border: none;
+}
+button:hover{
+    font-size: 22px;
+}
